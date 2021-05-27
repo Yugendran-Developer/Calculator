@@ -1,4 +1,5 @@
 let outputScreen = document.getElementById("output-screen");
+let displayscreen = document.getElementById("display-screen");
 
 function display(num){
     outputScreen.value += num;
@@ -6,6 +7,7 @@ function display(num){
 
 function Calculate(){
     try{
+        displayscreen.value = outputScreen.value;
         outputScreen.value = eval(outputScreen.value);
     }
     catch(err){
